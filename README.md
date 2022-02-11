@@ -430,3 +430,35 @@ NOT `output = ∼ input1` the output is opposite of the input
 - [programming and machine organization](https://cs61.seas.harvard.edu/site/2021/)
 - [Introduction to Computing systems](https://users.ncsa.illinois.edu/kindr/teaching/ece190_sp11/lectures/)
 - 
+# DATA STRUCTURES IN PYTHON:
+### Main refference : [Python std library](https://docs.python.org/3/library/)
+- Lists 
+- Set 
+- Tuples
+- Dictionary
+
+###LIST
+<code>
+  my_list = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+</code>
+
+```
+functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remove(), my_list.clear(), my_list.extend(),
+ my_list.reverse(), my_list and more
+```
+###SET
+
+
+
+###Tuples
+
+
+
+###Dictionaries
+
+
+
+##Questions
+
+1. Given a list or an array of numbers, how do you find three that add up to a given number? [sol]()
+2. 
