@@ -437,7 +437,7 @@ NOT `output = ∼ input1` the output is opposite of the input
 - Tuples
 - Dictionary
 
-###LIST
+### LIST
 <code>
   my_list = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
 </code>
@@ -446,19 +446,19 @@ NOT `output = ∼ input1` the output is opposite of the input
 functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remove(), my_list.clear(), my_list.extend(),
  my_list.reverse(), my_list and more
 ```
-###SET
+### SET
 
 
 
-###Tuples
+### Tuples
 
 
 
-###Dictionaries
+### Dictionaries
 
 
 
-##Questions
+## Questions
 
 1. Given a list or an array of numbers, how do you find three that add up to a given number? [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/sum_zero_from_3.py)
 2. How do you find the K'th largest number from a stream of numbers? [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/kth_largest.py)
