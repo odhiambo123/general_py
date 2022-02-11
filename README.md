@@ -460,5 +460,13 @@ functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remo
 
 ##Questions
 
-1. Given a list or an array of numbers, how do you find three that add up to a given number? [sol]()
-2. 
+1. Given a list or an array of numbers, how do you find three that add up to a given number? [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/sum_zero_from_3.py)
+2. How do you find the K'th largest number from a stream of numbers? [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/kth_largest.py)
+3. How to copy an image from a webpage [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/files_txt_str.py)
+4. String replacement[sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/files_txt_str.py)
+5. Count the numbe of lines in a file[sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/files_txt_str.py)
+6. How to uniqify a sequence [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/general_funcs.py)
+7. Get website's html [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/general_funcs.py)
+8. Read and write data from a file [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/general_funcs.py)
+9. 
+10. 
