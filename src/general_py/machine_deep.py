@@ -16,12 +16,11 @@ for i in range(64):
     ax.imshow(faces.images[i], cmap=plt.cm.bone, interpolation='nearest')
 
     # label the image with the target value
-    print(ax.text(0, 7, str(faces.target[i])))
+    #print(ax.text(0, 7, str(faces.target[i])))
 
 
 if __name__=='__main__':
-    print(faces.keys())
-    print(np.all(faces.images.reshape((400, 4096)) == faces.data))
-
-    # setup the figure
+    #print(faces.keys())
+    #print(np.all(faces.images.reshape((400, 4096)) == faces.data))
+    print (u'\u10dc',u'\u0923', u'\u2721') #https://home.unicode.org/
 
