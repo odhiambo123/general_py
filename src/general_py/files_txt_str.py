@@ -20,3 +20,10 @@ def count_lines_1(file_x):
     with open(file_x) as my_file:
         num_lines= sum(1 for _ in my_file)
         print(num_lines)
+def replace_at_given_index(txt,n,k,cha):
+    txt = txt[:n] + cha + txt[n+k:]
+    print(txt)
+
+
+if __name__== '__main__':
+    replace_at_given_index('Fariba', 3,3, '5')

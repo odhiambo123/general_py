@@ -1,3 +1,4 @@
+import heapq
 import statistics
 from statistics import mode
 
@@ -19,6 +20,10 @@ def create_list(*args, **kwargs):
 
     print('Other functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remove(), my_list.clear(), my_list.extend(), my_list.reverse(), my_list and more')
 
+def merge_lists(*args):
+
+   new_list = sorted(list(heapq.merge(*args)))
+   print(new_list)
 
 
 if __name__ == '__main__':
@@ -34,7 +39,13 @@ if __name__ == '__main__':
              "Prunes Pummelo (Chinese Grapefruit) Pumpkin Eggplant Endive Escarole Feijoa Fennel Figs (dry and fresh) " \
              "Garlic Gooseberries Grapefruit Grapes Green Beans Green Onions Greens (turnip, beet, collard, mustard) Guava Hominy Honeydew Melon Horned Melon" \
              "Iceberg Lettuce"
-    
+
     print(fruits[2])
     create_list('orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana')
 
+    S = [45,9,3,45,23,9,97,12,5]
+    k = [-1, -4,5,8,9,-5]
+    L = [0, -1,5,3,10,23]
+    P = [-1, 0, 1, 2, -1, -4,5,8,9,-5,-12,14,11]
+    Q = [89,-8,6,45,3,12,2,3]
+    merge_lists(S,k,L,P,Q)
