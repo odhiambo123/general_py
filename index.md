@@ -202,11 +202,11 @@ NOT `output = ∼ input1` the output is opposite of the input
 
 # Libraries.
 ### Machine learning
-- []
-- [Scikit-Learn]()
-- [TensorFlow]()
-- [Pytorch]()
-- [Theano]()
+- [Federeted Learnig](https://federated.withgoogle.com/)
+- [Scikit-Learn](https://scikit-learn.org/stable/index.html)
+- [TensorFlow](https://www.tensorflow.org/)
+- [Pytorch](https://pytorch.org/tutorials/)
+- [Theano](https://pypi.org/project/Theano/)
 <br>
 
 ### Web Development
@@ -430,7 +430,7 @@ NOT `output = ∼ input1` the output is opposite of the input
 - [Digital circuits and Number Systems](https://www.math.umd.edu/~immortal/CMSC250/notes/notes_2.pdf)
 - [programming and machine organization](https://cs61.seas.harvard.edu/site/2021/)
 - [Introduction to Computing systems](https://users.ncsa.illinois.edu/kindr/teaching/ece190_sp11/lectures/)
-- 
+- [mATHEMATICAL SYSMBOLS](https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols)
 # DATA STRUCTURES IN PYTHON:
 ### Main refference : [Python std library](https://docs.python.org/3/library/)
 - Lists 
@@ -439,25 +439,89 @@ NOT `output = ∼ input1` the output is opposite of the input
 - Dictionary
 
 ### LIST
-<code>
-  my_list = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
-</code>
-
-```
-functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remove(), my_list.clear(), my_list.extend(),
- my_list.reverse(), my_list and more
-```
-### SET
-
-
+- indexed 0 based
+- changeable by adding removing 
+- new items add to the end
+- allow duplicate values
+- 
+    ```
+    my_list = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+    
+  
+    functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remove(), my_list.clear(), my_list.extend(),
+    my_list.reverse(), my_list and more
+    
+    ```
 
 ### Tuples
-
+- defined order of items unchangeable
+- allow duplicates
+- indexed 0 based
+- can contain different data types
+  - make a tuple using 
+    - 
+       ```
+       tuple()
+     
+       For example:
+       my_tuple = tuple(("abc", 34, True, 40, "male","apple", "banana", "cherry"))
+    
+      ```
+- 
 
 
 ### Dictionaries
+- Also called hash tables, hash, hash map, map, unordered map.
+  - O(1) lookups
+  - ordered
+  - no duplicates
+  - 
+  - slow worst case lookup O(n)
+  - not cache friendly
+  - 
+  ```
+      visitor_by_the_hour = {
+            'John J': 1200,
+            'Kapilio M': 1400,
+            'Ben K': 1500,
+      }
+  ```
+### SET
+  - A Set is like a hash map except it only stores keys , without values
+    - tracking groups of items
+    - nodes visited
+    - characters seen
+    - colors used in neighbor nodes
+    ```
+      visitor_by_the_hour = set()
+    
+      visitor_by_the_hour.add('John J')
+      visitor_by_the_hour.add(Kapilio M')
+      visitor_by_the_hour.add('Ben K)
+    
+      'John M' in visitor_by_the_hour # True
+    
+    ```
+## Keywords in python
+  - Python has 3 Keywords
+```
+False	      def	if	        raise
+None	      del	import	        return
+True	      elif	in	        try
+and	      else	is	        while
+as	      except	lambda	        with
+assert	      finally	nonlocal        yield
+break	      for	not	
+class	      from	or	
+continue      global	pass	
 
+```
 
+  [Python Tokens](https://github.com/python/cpython/blob/3.10/Grammar/Tokens)
+  [Python Grammar Specification](https://github.com/python/cpython/blob/3.10/Grammar/python.gram)
+
+### Some Good Algorithms
+  A*
 
 ## Questions
 
@@ -469,5 +533,20 @@ functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remo
 6. How to uniqify a sequence [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/general_funcs.py)
 7. Get website's html [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/general_funcs.py)
 8. Read and write data from and to a file [sol =>](https://github.com/odhiambo123/general_py/blob/main/src/general_py/general_funcs.py)
-9. 
-10. 
+9. Find the most common word
+10. What is s bottleneck in the algorithm
+11. given a smaller string a and a larger string b, design an algorithm to find all the permutations of string 'a' in string 'b'.
+12. Build an algorithm to print [all permutations of a string]()
+13. How would you keep track of numbers that are randomly generated and stored in an expanding array
+14. How to keep [track of all unique visitors]() who came in the last 10 minutes.
+15. From a positive integer n Generate a quare matrix filled with elements from 1 to n^2 in spiral order
+16. convert roman numbers to integers
+17. Convert integers to roman numbers.
+18. From a 2d grid map of 0's(water) and 1's(land). count the number of islands
+19. Finds the shortest path from one node to all other nodes in a weighted graph[Dijkstra's Algorithm]()
+20. Arranges the nodes in a directed, acyclic graph in a special order based on incoming edges.[Topological Sort]()
+21. Finds the cheapest set of edges needed to reach all nodes in a weighted graph[Minimum Spanning Tree]()
+22. Find out if a binary tree is balanced[BFS]()
+23. Where each stone has a weight(integer) and a value(dollars) for example (5,210) for five pounds and 210 dollars. write a function max_fit()
+    to find the correct combination list/tuple of stones to fill the bag with maximum value. [Combinatorial Optimization]()
+24.  [go to SET](#SET)

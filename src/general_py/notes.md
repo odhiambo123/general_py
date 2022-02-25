@@ -1,0 +1,26 @@
+# How to Optimize your Algorithms:
+- Looking for Bottlenecks, Unnecessary/redundancy, Repeat/Duplicates. 
+  - A bottleneck is that part of code in your algorith that slows down the rest. 
+  - Watch out for any unnecessary work and Duplicate work
+- Try doing it yourself Naturally 
+  - Think through it, naturally you would solve problems quite easily without complicating it too much.
+  - take for instance looking through names alphabetized in a stack. you would normally search for Solomon near the end of the stack as compared to Ethan, why wouldn't you apply the same in your algorithm design? 
+- Simplify and Generalize
+  - Chop down the problem and solve in smaller chunks
+- Base Case and Build
+  - Solve the base case then walk your way up.
+- Data structure brainstorm
+  - walk through possible appropriate data structures for the problem and settle for the best.
+  - eg:
+    - Lists
+      - as Stacks
+      - as Queues
+      - 
+    - Arrays
+    - Binary tree
+- Look for the Best Conceivable runtime
+  - 
+- using bottom up (a way to avoid recursion) when call stack build up is suspected
+- bottom up algorithms start from the beginning
+- recursive algorithm starts from the end and works backwards.
+- 
