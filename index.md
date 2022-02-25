@@ -555,4 +555,5 @@ continue      global	pass
 22. Find out if a binary tree is balanced[BFS]()
 23. Where each stone has a weight(integer) and a value(dollars) for example (5,210) for five pounds and 210 dollars. write a function max_fit()
     to find the correct combination list/tuple of stones to fill the bag with maximum value. [Combinatorial Optimization]()
-24.  [go to SET](#SET)
+24. Show some [bit manipulations](https://graphics.stanford.edu/~seander/bithacks.html)
+25. 
