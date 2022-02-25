@@ -353,7 +353,7 @@ NOT `output = ∼ input1` the output is opposite of the input
 
   - [QuTiP](https://qutip.org/)
   - [PyQuil](https://pyquil-docs.rigetti.com/en/stable/compiler.html)
-  - [Cirq]()
+  - [Cirq](https://quantumai.google/cirq)
   - [Qiskit](https://qiskit.org/)
 <br>
   
@@ -421,16 +421,18 @@ NOT `output = ∼ input1` the output is opposite of the input
 - [Twisted](https://pypi.org/project/Twisted/)
 - [Faker](https://faker.readthedocs.io/en/master/)
 
-## certifications
+### certifications
  - [Terraform](https://learn.hashicorp.com/collections/terraform/certification)
  - [Kubernetes](https://kubernetes.io/docs/tutorials/)
  - [Orchestration](https://www.redhat.com/en/topics/automation/what-is-orchestration)
 
-## references
+### references
 - [Digital circuits and Number Systems](https://www.math.umd.edu/~immortal/CMSC250/notes/notes_2.pdf)
 - [programming and machine organization](https://cs61.seas.harvard.edu/site/2021/)
 - [Introduction to Computing systems](https://users.ncsa.illinois.edu/kindr/teaching/ece190_sp11/lectures/)
 - [mATHEMATICAL SYSMBOLS](https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols)
+<br>
+
 # DATA STRUCTURES IN PYTHON:
 ### Main refference : [Python std library](https://docs.python.org/3/library/)
 - Lists 
@@ -443,7 +445,6 @@ NOT `output = ∼ input1` the output is opposite of the input
 - changeable by adding removing 
 - new items add to the end
 - allow duplicate values
-- 
     ```
     my_list = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
     
@@ -452,33 +453,31 @@ NOT `output = ∼ input1` the output is opposite of the input
     my_list.reverse(), my_list and more
     
     ```
+  <br>
 
 ### Tuples
 - defined order of items unchangeable
 - allow duplicates
 - indexed 0 based
 - can contain different data types
-  - make a tuple using 
-    - 
-       ```
+
+
+  Make a tuple using the function
        tuple()
      
        For example:
        my_tuple = tuple(("abc", 34, True, 40, "male","apple", "banana", "cherry"))
     
-      ```
-- 
 
 
 ### Dictionaries
 - Also called hash tables, hash, hash map, map, unordered map.
+- Stores data in kte:value pairs
+- declared inside curly brackets
   - O(1) lookups
-  - ordered
   - no duplicates
-  - 
   - slow worst case lookup O(n)
   - not cache friendly
-  - 
   ```
       visitor_by_the_hour = {
             'John J': 1200,
@@ -486,7 +485,12 @@ NOT `output = ∼ input1` the output is opposite of the input
             'Ben K': 1500,
       }
   ```
-### SET
+  -Major operations include
+
+  ```clear(), copy(), values(), update(), get(), items(), keys(), pop(), popitem().```
+
+
+###SET
   - A Set is like a hash map except it only stores keys , without values
     - tracking groups of items
     - nodes visited
@@ -502,6 +506,8 @@ NOT `output = ∼ input1` the output is opposite of the input
       'John M' in visitor_by_the_hour # True
     
     ```
+    Major Operations in set include:
+      ```add(), update(), discard(), remove(), pop(),clear().```
 ## Keywords in python
   - Python has 3 Keywords
 ```
