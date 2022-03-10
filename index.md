@@ -430,8 +430,11 @@ NOT `output = ∼ input1` the output is opposite of the input
 - [Digital circuits and Number Systems](https://www.math.umd.edu/~immortal/CMSC250/notes/notes_2.pdf)
 - [programming and machine organization](https://cs61.seas.harvard.edu/site/2021/)
 - [Introduction to Computing systems](https://users.ncsa.illinois.edu/kindr/teaching/ece190_sp11/lectures/)
-- [mATHEMATICAL SYSMBOLS](https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols)
-<br>
+- [MATHEMATICAL SYMBOLS](https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols)
+- [Bit Twiddling Hacks](https://graphics.stanford.edu/~seander/bithacks.html)
+- [Algorythm Types](https://1drv.ms/p/s!AsTcf-RoH_KDn2ntJVdYcXgYZgbN?e=DVwUmG)
+- 
+- <br>
 
 # DATA STRUCTURES IN PYTHON:
 ### Main refference : [Python std library](https://docs.python.org/3/library/)
@@ -527,7 +530,15 @@ continue      global	pass
   [Python Grammar Specification](https://github.com/python/cpython/blob/3.10/Grammar/python.gram)
 
 ### Some Good Algorithms
-  A*
+- Types of algorithms include:
+  - Backtracking algorithms
+  - Branch and bound 
+  - Bruteforce
+  - Divide and Conquer
+  - Dynamic programming
+  - Greedy 
+  - Randomized
+  - Simple recursive 
 
 ## Questions
 
