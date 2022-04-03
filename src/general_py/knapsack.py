@@ -31,7 +31,7 @@ def max_bag_value(stone_tuples, weight_capacity):
                 max_val_at_capacity[current_capacity] = current_max_val
             return max_val_at_capacity[weight_capacity]
 
-def knapsackDP(w, v, W):
+def knapsackDP(w, v, W): #(weight, value, W)
     n = len(v)
 
     if n <= 0 or W <= 0:
