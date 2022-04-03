@@ -446,17 +446,35 @@ NOT `output = ∼ input1` the output is opposite of the input
 ### LIST
 - indexed 0 based
 - changeable by adding removing 
-- new items add to the end
-- allow duplicate values
-    ```
-    my_list = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
-    
+  - new items add to the end
+    - allow duplicate values
+        ```
+        my_list = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+        the_list = ['school', 'is'. 'good']
+        name = ['Mr', 'Steele']
   
-    functions include:  my_list.index(), my_list.copy(), my_list.pop(), my_list.remove(), my_list.clear(), my_list.extend(),
-    my_list.reverse(), my_list and more
+        functions include:  
+      my_list.index(), 
+      my_list.copy(), 
+      my_list.pop(), 
+      my_list.remove(), 
+      my_list.clear(), 
+      my_list.extend(),
+      my_list.reverse(), 
+      ' '.join(the_list)
+      '. '.join(name)
+      
+      slicing a list:
+      some_list[start:end:step]
+      
+      first_list = [1, 2, 3, 4, 5, 6]
+
+      first_list[1::2] # [2, 4, 6]
+
+      first_list[::2] # [1, 3, 5]
     
-    ```
-  <br>
+        ```
+      <br>
 
 ### Tuples
 - defined order of items unchangeable
@@ -481,16 +499,105 @@ NOT `output = ∼ input1` the output is opposite of the input
   - no duplicates
   - slow worst case lookup O(n)
   - not cache friendly
+  - create using curly braces of the dict() function
+  - iterate over using key() values() and items()
+  - using methods like get ensures more graceful handling of the errors
   ```
       visitor_by_the_hour = {
             'John J': 1200,
             'Kapilio M': 1400,
             'Ben K': 1500,
       }
+  
+      
+  
+      instructor = {
+              "name": "Colt",
+              "owns_dog": True,
+              "num_courses": 4,
+              "favorite_language": "Python",
+              "is_hilarious": False,
+              44: "my favorite number!"
+      }
+    To access all the values in a disctionary we use .values() operator
+    
+    for value in instructor.values():
+    print(value)
+
+    # "Colt"
+    # True
+    # 4
+    # "Python"
+    # False
+    # "my favorite number!"
+
+    To access all the Key in the dictionary we use the .key() method
+  
+    for key in instructor.keys():
+    print(key)
+
+    # name
+    # owns_dog
+    # num_courses
+    # favorite_language
+    # is_hilarious
+    # 44
+  
+  To access all keys and values use the .items()
+    for key,value in instructor.items():
+    print(key,value)
+
+    # name "Colt"
+    # owns_dog True
+    # num_courses 4
+    # favorite_language "Python"
+    # is_hilarious False
+    # 44 "my favorite number!"
+  
+  To check is a particular key is on the dictionary
+    "name" in instructor # True
+    "awesome" in instructor # False
+  
+  To check if a value is in the dictionary
+  
+    "Colt" in instructor.values() # True
+    "Nope!" in instructor.values() # False
   ```
   -Major operations include
 
-  ```clear(), copy(), values(), update(), get(), items(), keys(), pop(), popitem().```
+  ```
+    clear()   : clears all the keys and values in the dictionary,
+    copy()    : makes a copr of the dictionary
+    fromkeys(): creates a key value pair from comaseparated values
+    values()  :  
+    update(), : updates keys and values in the dictionary with another set of key-value pairs 
+    get(),    : Retrieves key in an object and return non instead of an error if the key does not exist
+    items(),  :
+    keys(), 
+    pop(),    : accepts one argument and removes the that key value pair from the dictionary
+    popitem().: takes no arguments and removes a random key from the dictionary
+    
+    Dictionary Comprehension:
+    { ____:____ for ___ in ____} iterates over values by using the .items()
+    numbers = dict(first=1, second=2, third=3)
+  
+    squared_numbers = {key: value ** 2 for key,value in numbers.items()}
+    print(squared_numbers) # {'first': 1, 'second': 4, 'third': 9}
+    
+    {num: num**2 for num in [1,2,3,4,5]}
+  
+    str1 = "ABC"
+    str2 = "123"
+    combo = {str1[i]: str2[i] for i in range(0,len(str1))} 
+    print(combo) # # {'A': '1', 'B': '2', 'C': '3'}
+  
+  Conditional logics with dictionaries:
+  
+    num_list = [1,2,3,4]
+    { num:("even" if num % 2 == 0 else "odd") for num in num_list }
+    # {1: 'odd', 2: 'even', 3: 'odd', 4: 'even'}
+  
+  ```
 
 
 ###SET
@@ -539,6 +646,10 @@ continue      global	pass
   - Greedy 
   - Randomized
   - Simple recursive 
+### Efficiency in storage:
+  - If an integer is never going to be greater than 65,535, then it can be store as a 16-bit unsigned integer
+  - In python there is no 16-bit or 64-bit unsigned integer, instead there is just an int type that can store numbers to arbitrary precision.
+  - to get thesize of an object in memory, you can use sys.getsizeof()
 
 ## Questions
 
