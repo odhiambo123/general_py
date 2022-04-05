@@ -678,4 +678,6 @@ continue      global	pass
 23. Where each stone has a weight(integer) and a value(dollars) for example (5,210) for five pounds and 210 dollars. write a function max_fit()
     to find the correct combination list/tuple of stones to fill the bag with maximum value. [Combinatorial Optimization]()
 24. Show some [bit manipulations](https://graphics.stanford.edu/~seander/bithacks.html)
-25. 
+25. Given an integer num, return three consecutive integers(as a sorted array) that sum to num. If num cannot be expresses as the sum of three consecutive integers, return an empty array.[Sol](https://gist.github.com/1628842308132c770453d6f490854800)
+26. Given an integer num, rearrange the digits of num such that its value is minimized, and it does not contain any leading zeros. return the rearranged number with minimal value. note: The sign should not change. constraints -10^15<=num<10^15 [Sol](https://gist.github.com/4dea14c275dd825eee8f7aa945b7a46c)
+27. 

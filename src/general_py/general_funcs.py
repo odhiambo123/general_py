@@ -252,8 +252,36 @@ def csv_to_json(csvFilePath, jsonFilePath):
         jsonString = json.dumps(jsonArray, indent=4)
         jsonf.write(jsonString)
 
+def find_3_consec_nums(num):
+    x=[]
+    if num % 3 !=0:
+        return x
+    else:
+        n=num//3
+        m=n-1
+        o=n+1
+        x.append(m)
+        x.append(n)
+        x.append(o)
+    print(x)
+
+def rearange_to_smalest(num):
+
+    arr = sorted(str(abs(num))) #sort and rteturn the absolute value
+    if num<=0: #check if its 0 or negative
+        return -int(''.join(arr[::-1])) #rearange, combine, and add the negative
+    # make sure there are no leading zeroes by looping over and swaping with the 1st non-zero
+    i = 0
+    while arr[i] == '0':
+        i +=1
+    arr[0], arr[i] = arr[i],arr[0]
+    return int(''.join(arr))
+
+assert(rearange_to_smalest(-325) == -532) #check that its true
 
 if __name__ == '__main__':
+    rearange_to_smalest(-63124)
+    #find_3_consec_nums(12)
     #davidodhiambo_web()
     #uni_qify2("fariba")
     #replace_string("fariba","f","F")
