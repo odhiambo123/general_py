@@ -15,6 +15,30 @@ from functools import cache
 from typing import Generator
 from secrets import token_bytes
 from typing import Tuple
+import pyttsx3
+
+def text_to_speech():
+
+    try:
+        import pyttsx3
+    except ImportError:
+        print("pyttsx3 needs to be installed, you can install it on windows by running: ")
+        print("pip install pyttsx3")
+        sys.exit()
+    tts = pyttsx3.init() #Initialize the TTS engine
+    print("enter text to speak, or QUIT to quit")
+
+    while True:
+        text = input('> ')
+        if text.upper() == 'QUIT':
+
+            print('thanks for playing')
+            sys.exit()
+        tts.say(text)
+        tts.runAndWait()
+
+
+
 
 
 # replace string
@@ -238,7 +262,7 @@ def roman_to_int(s: str) -> int:
     print(num)
     return num
 
-
+# Reading csv files into JSON
 def csv_to_json(csvFilePath, jsonFilePath):
     jsonArray = []
 
@@ -280,7 +304,8 @@ def rearange_to_smalest(num):
 assert(rearange_to_smalest(-325) == -532) #check that its true
 
 if __name__ == '__main__':
-    rearange_to_smalest(-63124)
+    text_to_speech()
+    #rearange_to_smalest(-63124)
     #find_3_consec_nums(12)
     #davidodhiambo_web()
     #uni_qify2("fariba")

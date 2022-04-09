@@ -482,16 +482,14 @@ NOT `output = ∼ input1` the output is opposite of the input
 - indexed 0 based
 - can contain different data types
 
-
   Make a tuple using the function
        tuple()
      
        For example:
        my_tuple = tuple(("abc", 34, True, 40, "male","apple", "banana", "cherry"))
-    
-
 
 ### Dictionaries
+
 - Also called hash tables, hash, hash map, map, unordered map.
 - Stores data in kte:value pairs
 - declared inside curly brackets
@@ -636,7 +634,8 @@ continue      global	pass
   [Python Tokens](https://github.com/python/cpython/blob/3.10/Grammar/Tokens)
   [Python Grammar Specification](https://github.com/python/cpython/blob/3.10/Grammar/python.gram)
 
-### Some Good Algorithms
+### Algorithms
+
 - Types of algorithms include:
   - Backtracking algorithms
   - Branch and bound 
@@ -646,10 +645,11 @@ continue      global	pass
   - Greedy 
   - Randomized
   - Simple recursive 
+
 ### Efficiency in storage:
   - If an integer is never going to be greater than 65,535, then it can be store as a 16-bit unsigned integer
   - In python there is no 16-bit or 64-bit unsigned integer, instead there is just an int type that can store numbers to arbitrary precision.
-  - to get thesize of an object in memory, you can use sys.getsizeof()
+  - to get the size of an object in memory, you can use sys.getsizeof()
 
 ## Questions
 
@@ -680,4 +680,6 @@ continue      global	pass
 24. Show some [bit manipulations](https://graphics.stanford.edu/~seander/bithacks.html)
 25. Given an integer num, return three consecutive integers(as a sorted array) that sum to num. If num cannot be expresses as the sum of three consecutive integers, return an empty array.[Sol](https://gist.github.com/1628842308132c770453d6f490854800)
 26. Given an integer num, rearrange the digits of num such that its value is minimized, and it does not contain any leading zeros. return the rearranged number with minimal value. note: The sign should not change. constraints -10^15<=num<10^15 [Sol](https://gist.github.com/4dea14c275dd825eee8f7aa945b7a46c)
-27. 
+27. create JSON from CSV [code](https://gist.github.com/e16806d7db55e6bcc431a378d4e8999c)
+28. Text to speech[code](https://gist.github.com/odhiambo123/d0153691b23e6f678ea4953cccf56b39)
+29. 
