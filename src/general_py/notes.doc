@@ -1,0 +1,2 @@
+As you make changes to your files and create new commits, Git identifies the changed files and applies a new SHA-1 hash to the file, while unchanged files retain their existing SHA-1 hash. As the SHA-1 hash for a file changes, it references the previous SHA-1 hash as the parent. In GitHub, you can see the first seven characters of the SHA-1 hash (A) on any commit.
+

@@ -17,6 +17,7 @@ from secrets import token_bytes
 from typing import Tuple
 import pyttsx3
 
+
 def text_to_speech():
 
     try:
@@ -27,6 +28,10 @@ def text_to_speech():
         sys.exit()
     tts = pyttsx3.init() #Initialize the TTS engine
     print("enter text to speak, or QUIT to quit")
+    engine = pyttsx3.init()
+    rate = engine.getProperty('rate')
+    engine.setProperty('rate', 155)
+    print(rate)
 
     while True:
         text = input('> ')
@@ -35,11 +40,8 @@ def text_to_speech():
             print('thanks for playing')
             sys.exit()
         tts.say(text)
+
         tts.runAndWait()
-
-
-
-
 
 # replace string
 def replace_string(txt, x, y):
