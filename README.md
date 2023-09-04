@@ -1,1 +1,1 @@
-# general_py has [documentation](https://odhiambo123.github.io/general_py/) page 
+# general_py has [documentation](https://github.com/odhiambo123/general_py/blob/gh-pages/index.md) page 
