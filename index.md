@@ -437,6 +437,8 @@ NOT `output = ∼ input1` the output is opposite of the input
 - <br>
 
 # DATA STRUCTURES IN PYTHON:
+- Side notes:
+  - try to use a peudocode before implementation because it can save you time down the line.
 ### Main refference : [Python std library](https://docs.python.org/3/library/)
 - Lists 
 - Set 
