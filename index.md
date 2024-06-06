@@ -191,7 +191,7 @@ NOT `output = ∼ input1` the output is opposite of the input
 ![alt Circuit2](img/Circuit-2.PNG)
 <br>
 
-![alt AND](img/AND.PNG) AND `output = input1 ∧ input2` both are true
+![alt AND](/img/AND.PNG) AND `output = input1 ∧ input2` both are true
 <br>
 
 ![alt OR](img/OR.PNG) OR  `output = input1 ∨ input2` one or both are true
