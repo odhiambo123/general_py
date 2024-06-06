@@ -173,31 +173,31 @@ OR  `output = input1 ∨ input2` one or both are true
 
 NOT `output = ∼ input1` the output is opposite of the input
 
-![alt oneGate.png](img/oneGate.PNG)
+![alt oneGate.png](https://github.com/odhiambo123/general_py/blob/main/img/oneGate.PNG?raw=true)
 <br>
 
-![alt twoGateSeries](img/twoGateSeries.PNG)
+![alt twoGateSeries](https://github.com/odhiambo123/general_py/blob/main/img/twoGateSeries.PNG?raw=true)
 <br> 
 
-![alt twoGatesparallel](img/twoGateParallel.PNG)
+![alt twoGatesparallel](https://github.com/odhiambo123/general_py/blob/main/img/twoGateParallel.PNG?raw=true)
 <br>
 
-![alt threeGatesParallelAndSeries](img/threeGatesParallelAndSeries.PNG)
+![alt threeGatesParallelAndSeries](https://github.com/odhiambo123/general_py/blob/main/img/threeGatesParallelAndSeries.PNG?raw=true)
 <br>
 
-![alt Circuit1](img/Circuit-1.PNG)
+![alt Circuit1](https://github.com/odhiambo123/general_py/blob/main/img/Circuit-1.PNG?raw=true)
 <br>
 
-![alt Circuit2](img/Circuit-2.PNG)
+![alt Circuit2](https://github.com/odhiambo123/general_py/blob/main/img/Circuit-2.PNG?raw=true)
 <br>
 
 ![alt AND](https://github.com/odhiambo123/general_py/blob/main/img/AND.PNG?raw=true) AND `output = input1 ∧ input2` both are true
 <br>
 
-![alt OR](img/OR.PNG) OR  `output = input1 ∨ input2` one or both are true
+![alt OR](https://github.com/odhiambo123/general_py/blob/main/img/OR.PNG?raw=true) OR  `output = input1 ∨ input2` one or both are true
 <br>
 
-![alt NOT](img/NOT.PNG) NOT `output = ∼ input1` the output is opposite of the input.
+![alt NOT](https://github.com/odhiambo123/general_py/blob/main/img/NOT.PNG?raw=true) NOT `output = ∼ input1` the output is opposite of the input.
 <br>
 
 # Libraries.
