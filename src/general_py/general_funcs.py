@@ -1,47 +1,26 @@
+import csv
 import heapq
 import json
-import csv
-import statistics
-from statistics import mode
-import functools
-import linecache
+import os
 import urllib.request
-import requests
-from typing import List
-from typing import Dict
-import sys
-from functools import lru_cache
 from functools import cache
-from typing import Generator
+from functools import lru_cache
 from secrets import token_bytes
+from statistics import mode
+from typing import Generator
 from typing import Tuple
-import pyttsx3
+
+import requests
+from gtts import gTTS
 
 
 def text_to_speech():
-
-    try:
-        import pyttsx3
-    except ImportError:
-        print("pyttsx3 needs to be installed, you can install it on windows by running: ")
-        print("pip install pyttsx3")
-        sys.exit()
-    tts = pyttsx3.init() #Initialize the TTS engine
-    print("enter text to speak, or QUIT to quit")
-    engine = pyttsx3.init()
-    rate = engine.getProperty('rate')
-    engine.setProperty('rate', 155)
-    print(rate)
-
-    while True:
-        text = input('> ')
-        if text.upper() == 'QUIT':
-
-            print('thanks for playing')
-            sys.exit()
-        tts.say(text)
-
-        tts.runAndWait()
+    text = input("Enter the text you want to convert to speech: ")
+    language = 'en'
+    speech = gTTS(text=text, lang=language, slow=False)
+    speech.save("text.mp3")
+    print("\n 😊Text saved as speech")
+    os.system("open text.mp3")
 
 # replace string
 def replace_string(txt, x, y):
@@ -114,13 +93,12 @@ def fib3(n: int) -> int:
     return fib3(n-2) + fib3(n-1) #recursive case
 
 def fib4(n: int)->int:
-    if n == 0: return n # special case
-    last: int =0 # initially set to fib(0)
-    next: int =1 # initially set fib(1)
-
-    for _ in range (1, n):
-        last, next = next , last + next
-    return  next
+    if n == 0: return n
+    last: int = 0 #fib(0)
+    next: int = 1 #fib(1)
+    for _ in range(1, n):
+        last, next = next, last + next
+    return next
 
 #printing the fibonacci numberss
 
@@ -305,6 +283,104 @@ def rearange_to_smalest(num):
 
 assert(rearange_to_smalest(-325) == -532) #check that its true
 
+# find out if array b can be rearanged to equal array a
+def can_rearrange(a,b):
+    return sorted(a) == sorted(b)
+#assert(can_rearrange([1,2,3],[3,2,1]) == True)
+
+# Given two arrays A and B of length N, determine if there is a way to make A equal to B by reversing any subarrays from array B any number of times.
+# Signature
+# bool areTheyEqual(int[] arr_a, int[] arr_b)
+# Input
+# All integers in array are in the range [0, 1,000,000,000].
+# Output
+# Return true if B can be made equal to A, return false otherwise.
+def areTheyEqual(arr_a, arr_b):
+    return sorted(arr_a) == sorted(arr_b)
+
+
+#There are n students, numbered from 1 to n, each with their own yearbook. They would like to pass their yearbooks
+# around and get them signed by other students.
+# You're given a list of n integers arr[1..n], which is guaranteed to be a permutation of 1..n (in other words, it
+# includes the integers from 1 to n exactly once each, in some order).
+# The meaning of this list is described below.
+# Initially, each student is holding their own yearbook. The students will then repeat the following two steps each minute:
+# Each student I will first sign the yearbook that they're currently holding (which may either belong to themselves or
+# to another student), and then they'll pass it to student arr[i-1]. It's possible that arr[i-1] = i for any given i,
+# in which case student I will pass their yearbook back to themselves. Once a student has received their own yearbook back,
+# they will hold on to it and no longer participate in the passing process.
+# It's guaranteed that, for any possible valid input, each student will eventually receive their own yearbook back and
+# will never end up holding more than one yearbook at a time. You must compute a list of n integers output, whose
+# element at i-1 is equal to the number of signatures that will be present in student I's yearbook once they receive it back
+# Input
+# n is in the range [1, 100,000].
+# Each value arr[i] is in the range [1, n], and all values in arr[i] are distinct.
+# Output
+# Return a list of n integers output, as described above.
+
+def findSignatureCounts(arr):
+  n = len(arr)
+  output = [1] * n  # Initialize with 1 as each student signs their own yearbook
+  visited = [False] * n
+
+  for i in range(n):
+      if not visited[i]:
+          current = i
+          cycle = []
+          while not visited[current]:
+              visited[current] = True
+              cycle.append(current)
+              current = arr[current] - 1  # -1 because arr is 1-indexed
+
+          cycle_length = len(cycle)
+          for student in cycle:
+              if arr[student] - 1 != student:  # If not passing to self
+                  output[student] = cycle_length
+
+  return output
+
+# These are the tests we use to determine if the solution is correct.
+# You can add your own at the bottom.
+
+def printInteger(n):
+  print('[', n, ']', sep='', end='')
+
+def printIntegerList(array):
+  size = len(array)
+  print('[', end='')
+  for i in range(size):
+    if i != 0:
+      print(', ', end='')
+    print(array[i], end='')
+  print(']', end='')
+
+test_case_number = 1
+
+def check(expected, output):
+  global test_case_number
+  expected_size = len(expected)
+  output_size = len(output)
+  result = True
+  if expected_size != output_size:
+    result = False
+  for i in range(min(expected_size, output_size)):
+    result &= (output[i] == expected[i])
+  rightTick = '\u2713'
+  wrongTick = '\u2717'
+  if result:
+    print(rightTick, 'Test #', test_case_number, sep='')
+  else:
+    print(wrongTick, 'Test #', test_case_number, ': Expected ', sep='', end='')
+    printIntegerList(expected)
+    print(' Your output: ', end='')
+    printIntegerList(output)
+    print()
+  test_case_number += 1
+
+
+#
+
+
 if __name__ == '__main__':
     text_to_speech()
     #rearange_to_smalest(-63124)
@@ -335,24 +411,37 @@ if __name__ == '__main__':
              "Garlic Gooseberries Grapefruit Grapes Green Beans Green Onions Greens (turnip, beet, collard, mustard) Guava Hominy Honeydew Melon Horned Melon" \
              "Iceberg Lettuce"
 
-    print(fruits[2])
-    create_list('orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana')
+    #print(fruits[2])
+    #create_list('orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana')
 
     S = [45, 9, 3, 45, 23, 9, 97, 12, 5]
     k = [-1, -4, 5, 8, 9, -5]
     L = [0, -1, 5, 3, 10, 23]
     P = [-1, 0, 1, 2, -1, -4, 5, 8, 9, -5, -12, 14, 11]
     Q = [89, -8, 6, 45, 3, 12, 2, 3]
-    merge_lists(S, k, L, P, Q)
+    #merge_lists(S, k, L, P, Q)
 
-    roman_to_int("MCLXVI")
-    roman_to_int("MC")
-    roman_to_int("C")
-    print(len("IX"))
+    #roman_to_int("MCLXVI")
+    #roman_to_int("MC")
+    #roman_to_int("C")
+    #print(len("IX"))
 
     # driver code
     # deciding the two file paths
     csvFilePath = r'Import_User_Sample.csv'
     jsonFilePath = r'Diseases.json'
 
-    csv_to_json(csvFilePath, jsonFilePath)
+    #csv_to_json(csvFilePath, jsonFilePath)
+
+
+    # Test Cases
+    arr_1 = [2, 1]
+    expected_1 = [2, 2]
+    output_1 = findSignatureCounts(arr_1)
+    check(expected_1, output_1)
+
+    arr_2 = [1, 2]
+    expected_2 = [1, 1]
+    output_2 = findSignatureCounts(arr_2)
+    check(expected_2, output_2)
+

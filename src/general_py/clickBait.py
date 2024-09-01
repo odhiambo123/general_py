@@ -94,5 +94,7 @@ def generateJobAutomatedHeadline():
     else:
         return 'This {} {} Didn\'t Think Robots Would Take {} Job. {} Was Wrong.'.format(state, noun, pronoun1, pronoun2)
     # If the program is run (instead of imported), run the game:
+
+
 if __name__ == '__main__':
     main()

@@ -1,25 +1,21 @@
 import sys, pygame
-pygame.init()
+from pygame.locals import *
 
-size = width, height = 500, 420
-speed = [1, 1]
-black = 0, 0, 0
+class PygameGame:
+    def __init__(self):
+        pygame.init()
+        self.size = self.width, self.height = 640, 480
+        self.black = 0, 0, 0
+        self.screen = pygame.display.set_mode(self.size)
 
-screen = pygame.display.set_mode(size)
+    def run(self):
+        while 1:
+            for event in pygame.event.get():
+                if event.type == QUIT: sys.exit()
 
-ball = pygame.image.load("intro_ball.gif")
-ballrect = ball.get_rect()
+            self.screen.fill(self.black)
+            pygame.display.flip()
 
-while 1:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT: sys.exit()
-
-    ballrect = ballrect.move(speed)
-    if ballrect.left < 0 or ballrect.right > width:
-        speed[0] = -speed[0]
-    if ballrect.top < 0 or ballrect.bottom > height:
-        speed[1] = -speed[1]
-
-    screen.fill(black)
-    screen.blit(ball, ballrect)
-    pygame.display.flip()
+if __name__ == '__main__':
+    game = PygameGame()
+    game.run()

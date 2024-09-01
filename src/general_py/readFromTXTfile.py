@@ -12,3 +12,4 @@ speech = gTTS(text=str(file), lang=language, slow=False)
 speech.save("notes.mp3")
 
 os.system("start notes.mp3")
+
