@@ -6,7 +6,6 @@ import sys
 
 from gtts import gTTS
 
-
 def readTextFromWeb(url):
     try:
         response = requests.get(url)

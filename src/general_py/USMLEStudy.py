@@ -1,9 +1,7 @@
-# create a program to help study for the USMLE
-#
-import random
+#fetch usmel study material from usmle.org
 
-def generateQuestion():
-     questionType = random.randint(1, 3)
-
-
+import requests
+from bs4 import BeautifulSoup
+import os
+import re
 

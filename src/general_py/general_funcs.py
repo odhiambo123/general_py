@@ -378,7 +378,59 @@ def check(expected, output):
   test_case_number += 1
 
 
-#
+#Merger of two sorted arrays
+# Given two sorted arrays, merge them such that the elements can be repeated
+# Signature
+# int[] mergeArrays(int[] a, int[] b)
+# Input
+# All integers in array are in the range [0, 1,000,000,000].
+# Output
+# Return an array containing all elements from both arrays sorted in non-decreasing order.
+def mergeArrays(a, b):
+    return sorted(a + b)
+
+#You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+
+# Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+# The final sorted array should not be returned by the function,
+# but instead be stored inside the array nums1. To accommodate this,
+# nums1 has a length of m + n, where the first m elements denote the
+# elements that should be merged, and the last n elements are set to 0
+# and should be ignored. nums2 has a length of n.
+
+# Signature
+# void merge(int[] nums1, int m, int[] nums2, int n)
+# Input
+# All integers in nums1 and nums2 are in the range [0, 1,000,000,000].
+# m and n are integers in the range [0, 2000].
+# Output
+# None
+def merge(nums1, m, nums2, n):
+    nums1[m:] = nums2
+    nums1.sort()
+
+
+#Given an integer array nums and an integer val, remove all occurrences of val
+# in nums in-place. The order of the elements may be changed. Then return the
+# number of elements in nums which are not equal to val.Consider the number of
+# elements in nums which are not equal to val be k, to get accepted, you need
+# to do the following things: Change the array nums such that the first k elements
+# of nums contain the elements which are not equal to val. The remaining elements of
+# nums are not important as well as the size of nums.Return k.
+
+# Signature
+# int removeElement(int[] nums, int val)
+# Input
+# All integers in nums are in the range [0, 1,000,000,000].
+# Output
+# Return an integer k, representing the number of elements in nums which are not equal to val.
+def removeElement(nums, val):
+    k = 0
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[k] = nums[i]
+            k += 1
+    return k
 
 
 if __name__ == '__main__':
