@@ -2,7 +2,7 @@ import yt_dlp
 import argparse
 import os
 
-VIDEO_SAVE_DIRECTORY = "cs50finance"
+VIDEO_SAVE_DIRECTORY = "/Volumes/G-DRIVE ArmorATD/movies/1"
 AUDIO_SAVE_DIRECTORY = "./audio"
 
 
@@ -39,7 +39,7 @@ def main():
     parser = argparse.ArgumentParser(description="Download YouTube videos or extract audio")
     parser.add_argument("url", help="YouTube video URL")
     parser.add_argument("-a", "--audio", action="store_true", help="Extract audio only")
-    args = parser.parse_args("youtube_url".split())
+    args = parser.parse_args("https://www.youtube.com/watch?v=wt5Bm65pUII".split())
 
     if args.audio:
         download_audio(args.url)
@@ -49,3 +49,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#to make the video playeble in the imac 
+# ffmpeg -i sql.mp4 -c:v libx264 -c:a aac sql1.mp4
