@@ -2,7 +2,7 @@ import yt_dlp
 import argparse
 import os
 
-VIDEO_SAVE_DIRECTORY = "/Volumes/G-DRIVE ArmorATD/movies/1"
+VIDEO_SAVE_DIRECTORY = "/Volumes/G-DRIVE ArmorATD/movies/1_ai/automateWithCode"
 AUDIO_SAVE_DIRECTORY = "./audio"
 
 
@@ -39,7 +39,7 @@ def main():
     parser = argparse.ArgumentParser(description="Download YouTube videos or extract audio")
     parser.add_argument("url", help="YouTube video URL")
     parser.add_argument("-a", "--audio", action="store_true", help="Extract audio only")
-    args = parser.parse_args("https://www.youtube.com/watch?v=wt5Bm65pUII".split())
+    args = parser.parse_args("https://www.youtube.com/watch?v=kNgM4QqYgpY".split())
 
     if args.audio:
         download_audio(args.url)
