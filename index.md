@@ -438,7 +438,7 @@ NOT `output = ∼ input1` the output is opposite of the input
 
 # DATA STRUCTURES IN PYTHON:
 ### Main refference : [Python std library](https://docs.python.org/3/library/)
-- Lists 
+- Lists; other languages use arrays 
 - Set 
 - Tuples
 - Dictionary
